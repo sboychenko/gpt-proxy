@@ -111,6 +111,12 @@ docker build -t gpt-api-proxy .
 docker run -p 8000:8000 --env-file .env gpt-api-proxy
 ```
 
+
+Либо
+```bash
+docker compose up --build
+```
+
 ## API Endpoints
 
 - `POST /v1/chat/completions` - основной эндпоинт для отправки запросов к GPT API

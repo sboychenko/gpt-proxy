@@ -4,7 +4,7 @@
 BASE_URL="http://localhost:8000"
 
 # Количество запросов для теста
-REQUESTS=70
+REQUESTS=15
 
 echo "Testing rate limiting with $REQUESTS requests..."
 

@@ -1,11 +1,14 @@
-from fastapi import FastAPI, HTTPException, Depends
+from fastapi import FastAPI, HTTPException, Depends, Request
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from typing import Optional, Dict, Any
+from typing import Optional, Dict, Any, List
 import aiohttp
 import os
 from dotenv import load_dotenv
 from middleware import rate_limit_middleware
+import httpx
+import redis
+import time
 
 # Загрузка переменных окружения
 load_dotenv()
@@ -15,7 +18,7 @@ app = FastAPI(title="GPT API Proxy")
 # Настройка CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["http://localhost:5173"],  # Vue dev server
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
