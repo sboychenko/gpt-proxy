@@ -1,6 +1,9 @@
 # GPT API Proxy
 
-Прокси-сервис для работы с различными GPT API (OpenAI, Grok, DeepSeek).
+![Application Screen](screen.png)
+
+Прокси-сервис для работы с различными GPT API (OpenAI, Grok, DeepSeek). Проект собран с помощью CursorAI
+
 
 ## Возможности
 
